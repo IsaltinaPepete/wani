@@ -32,12 +32,34 @@
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap; /* Permite que as fotos se ajustem na tela menor */
         }
         .photo {
             width: 200px;
             height: 200px;
             background-color: #ddd;
             border-radius: 50%;
+        }
+
+        /* Media query para telas pequenas */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px; /* Reduz o tamanho da fonte do título em telas pequenas */
+            }
+            .message {
+                font-size: 16px; /* Ajusta o tamanho da fonte da mensagem */
+            }
+            .photos {
+                flex-direction: column; /* Faz com que as imagens fiquem empilhadas em telas pequenas */
+                align-items: center;
+            }
+            .photo {
+                width: 150px;
+                height: 150px; /* Ajusta o tamanho das fotos para telas pequenas */
+            }
         }
     </style>
 </head>
